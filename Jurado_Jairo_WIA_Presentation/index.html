@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-
 		<title>Adipoli jQuery Plugin</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
@@ -45,12 +44,14 @@
                         <h2>To use it, just link a CSS file, and JavaScript file that can be downloaded from their website.</h2>
                         <a href="http://cube3x.com/adipoli-jquery-image-hover-plugin/" target="_blank">Go to Cube3X's Adipoli Plugin Website</a>
                     </section>
+                    
                     <!-- Step 1 -->
                     <section>
                         <p>Give an ID to each image in the HTML, then call it using:</p>
                         <pre><code class="fragment grow">$("#id").adipoli();</code></pre>
                         <p>Calling it like this will use its default settings which are "transparent" for "startEffect" and "normal" for "hoverEffects". This will make sense in the next slides.</p>
                     </section>
+                    
                     <!-- Step 2 -->
                     <section>
                         <p>To use additional options for the effects, use this:</p>
@@ -59,6 +60,7 @@
     'hoverEffect': 'boxRainGrow'
 });</code></pre>
                     </section>
+                    
                     <!-- Options 1 -->
                     <section>
                         <p>All the options are:</p>
@@ -77,6 +79,7 @@
                             <li>popOutShadow : Shadow length of popout image. Shadow works for those browsers which support text-shadow css.</li> 
                         </ul>
                     </section>
+                    
                     <!-- Options 2 -->
                     <section>
                         <p>startEffect options include:</p>
@@ -87,6 +90,7 @@
                             <li>grayscale</li> 
                         </ul>
                     </section>
+                    
                     <!-- Options 3 -->
                     <section>
                         <p>hoverEffect options include:</p>
@@ -110,9 +114,11 @@
                         </ul>
                     </section>
                 </section>
+                
+                <!-- The Example -->
                 <section>
                     <section>
-                    <h2>My Example</h2>
+                    <h2>Adipoli Example</h2>
                     <pre><code class="fragment grow"><!-- CSS -->
 <link href="css/lightbox.css" rel="stylesheet" />
 <link href="css/adipoli.css" rel="stylesheet" />
@@ -174,10 +180,9 @@ $("#strawhats").adipoli({
                 </section>
             </div>
 		</div>
-        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-        <script src="js/jquery.adipoli.min.js"></script>
         <script>
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration

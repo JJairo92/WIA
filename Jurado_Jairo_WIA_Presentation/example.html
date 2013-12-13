@@ -7,14 +7,28 @@
         <!-- CSS -->
         <link href="css/lightbox.css" rel="stylesheet" />
         <link href="css/adipoli.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Asul:400,700' rel='stylesheet' type='text/css'>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            #pictures {
+                text-align: center;
+            }
+            body {
+                background-color: #e2e0e0;
+                font-family: 'Asul', sans-serif;
+            }
+        </style>
         
-        <!-- JavaScript -->
+        <!-- JavaScript Libraries -->
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
         <script src="js/jquery.adipoli.min.js"></script>
         <script src="js/lightbox-2.6.min.js"></script>
 	</head>
 	<body>
 		<h1>Adipoli Effects</h1>
+        <div id="pictures">
         <a href="images/cats.jpg" data-lightbox="group1" title="Funny Cats">
             <img src="images/cats_small.jpg" alt="Image 1" id="cats" />
         </a>
@@ -50,7 +64,9 @@
         <a href="images/strawhats.jpg" data-lightbox="group1" title="The Strawhats">
             <img src="images/strawhats_small.jpg" alt="Image 9" id="strawhats" />
         </a>
+            </div>
         
+        <!-- JavaScript Code -->
         <script>
             $("#cats").adipoli({
                 'startEffect': 'overlay', // transparent, normal, overlay, grayscale
