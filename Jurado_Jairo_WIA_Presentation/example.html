@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+		<title>Simple Example Gallery</title>
+        
+        <!-- CSS -->
+        <link href="css/lightbox.css" rel="stylesheet" />
+        <link href="css/adipoli.css" rel="stylesheet" />
+        
+        <!-- JavaScript -->
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="js/jquery.adipoli.min.js"></script>
+        <script src="js/lightbox-2.6.min.js"></script>
+	</head>
+	<body>
+		<h1>Adipoli Effects</h1>
+        <a href="images/cats.jpg" data-lightbox="group1" title="Funny Cats">
+            <img src="images/cats_small.jpg" alt="Image 1" id="cats" />
+        </a>
+        
+        <a href="images/dragonball-cosplay.jpg" data-lightbox="group1" title="Dragonball Cosplay">
+            <img src="images/dragonball-cosplay_small.jpg" alt="Image 2" id="dragonball" />
+        </a>
+        
+        <a href="images/futurama-meme.jpg" data-lightbox="group1" title="Funny Meme">
+            <img src="images/futurama-meme_small.jpg" alt="Image 3" id="futurama" />
+        </a>
+        
+        <a href="images/girl-sea.jpg" data-lightbox="group1" title="Cool Photograph of Girl by Sea">
+            <img src="images/girl-sea_small.jpg" alt="Image 4" id="girl" />
+        </a>
+        
+        <a href="images/hp-snitch.jpg" data-lightbox="group1" title="Hilarious">
+            <img src="images/hp-snitch_small.jpg" alt="Image 5" id="snitch" />
+        </a>
+        
+        <a href="images/stadium.jpg" data-lightbox="group1" title="Awesome Stadium">
+            <img src="images/stadium_small.jpg" alt="Image 8" id="stadium" />
+        </a>
+        
+        <a href="images/mountain.jpg" data-lightbox="group1" title="Nice Photograph of Mountain">
+            <img src="images/mountain_small.jpg" alt="Image 7" width="300" height="225" id="mountain" />
+        </a>
+        
+        <a href="images/minion-blimp.jpg" data-lightbox="group1" title="Awesome Minion Blimp">
+            <img src="images/minion-blimp_small.jpg" alt="Image 6" width="360" height="225" id="blimp" />
+        </a>
+        
+        <a href="images/strawhats.jpg" data-lightbox="group1" title="The Strawhats">
+            <img src="images/strawhats_small.jpg" alt="Image 9" id="strawhats" />
+        </a>
+        
+        <script>
+            $("#cats").adipoli({
+                'startEffect': 'overlay', // transparent, normal, overlay, grayscale
+                'hoverEffect': 'sliceDown', // normal, popout, sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpRandom, sliceUpDown, sliceUpDownLeft, fold, foldLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse
+                'imageOpacity': .4, // sets opacity 0-1
+                'fillColor': "rgb(229, 73, 73)", // color names, hex values, and rgba; inside quotes
+                'overlayText': "Cats!",
+                'textColor': "white",
+                'boxCols': 7
+            });
+            $("#dragonball").adipoli({
+                'startEffect': 'transparent',
+                'hoverEffect': 'popout',
+            });
+            $("#futurama").adipoli({
+                'startEffect': 'overlay',
+                'hoverEffect': 'sliceDownLeft',
+                'slices': 20
+            });
+            $("#girl").adipoli({
+                'startEffect': 'grayscale',
+                'hoverEffect': 'boxRainGrow'
+            });
+            $("#snitch").adipoli({
+                'startEffect': 'overlay',
+                'hoverEffect': 'foldLeft',
+                'fillColor': 'aquamarine'
+            });
+            $("#stadium").adipoli({
+                'startEffect': 'transparent',
+                'hoverEffect': 'boxRandom'
+            });
+            $("#mountain").adipoli({
+                'startEffect': 'grayscale',
+                'hoverEffect': 'popout'
+            });
+            $("#blimp").adipoli({
+                'startEffect': 'grayscale',
+                'hoverEffect': 'boxRain'
+            });
+            $("#strawhats").adipoli({
+                'startEffect': 'transparent', // transparent, normal, overlay, grayscale
+                'hoverEffect': 'sliceUpRandom'
+            });
+        </script>
+	</body>
+</html>

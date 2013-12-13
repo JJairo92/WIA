@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Adipoli jQuery Plugin</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="css/adipoli.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Adipoli jQuery Plugin</h1>
+					<h3>by Jairo Jurado</h3>
+				</section>
+                <section>
+                    <h2>Adipoli is a jQuery plugin that deals with hover effects on images.</h2>
+                </section>
+                <section>
+                    <section>
+                        <h2>To use it, just link a CSS file, and JavaScript file that can be downloaded from their website.</h2>
+                        <a href="http://cube3x.com/adipoli-jquery-image-hover-plugin/" target="_blank">Go to Cube3X's Adipoli Plugin Website</a>
+                    </section>
+                    <!-- Step 1 -->
+                    <section>
+                        <p>Give an ID to each image in the HTML, then call it using:</p>
+                        <pre><code class="fragment grow">$("#id").adipoli();</code></pre>
+                        <p>Calling it like this will use its default settings which are "transparent" for "startEffect" and "normal" for "hoverEffects". This will make sense in the next slides.</p>
+                    </section>
+                    <!-- Step 2 -->
+                    <section>
+                        <p>To use additional options for the effects, use this:</p>
+                        <pre><code class="fragment grow">$("#id").adipoli({
+    'startEffect': 'grayscale',
+    'hoverEffect': 'boxRainGrow'
+});</code></pre>
+                    </section>
+                    <!-- Options 1 -->
+                    <section>
+                        <p>All the options are:</p>
+                        <ul>
+                            <li>startEffect - Default style of image</li>
+                            <li>hoverEffect - Image style on mouse over</li>
+                            <li>imageOpacity - opacity of image considered when start effect is transparent or overlay</li>
+                            <li>animSpeed - Animation speed for the effect</li>
+                            <li>fillColor - Overlay color</li>
+                            <li>textColor - Text Color</li>
+                            <li>overlayText - Default HTML to be displayed on overlay</li>
+                            <li>slices - Number of slices for slice animations</li>
+                            <li>boxCols - Number of boxes in a row for box animations</li>
+                            <li>boxRows - Number of rows for box animations</li>
+                            <li>popOutMargin - Margin of Image popout</li>
+                            <li>popOutShadow : Shadow length of popout image. Shadow works for those browsers which support text-shadow css.</li> 
+                        </ul>
+                    </section>
+                    <!-- Options 2 -->
+                    <section>
+                        <p>startEffect options include:</p>
+                        <ul>
+                            <li>transparent</li>
+                            <li>normal</li>
+                            <li>overlay</li>
+                            <li>grayscale</li> 
+                        </ul>
+                    </section>
+                    <!-- Options 3 -->
+                    <section>
+                        <p>hoverEffect options include:</p>
+                        <ul>
+                            <li>normal</li>
+                            <li>popout</li>
+                            <li>sliceDown</li>
+                            <li>sliceDownLeft</li>
+                            <li>sliceUp</li>
+                            <li>sliceUpLeft</li>
+                            <li>sliceUpRandom</li>
+                            <li>sliceUpDown</li>
+                            <li>sliceUpDownLeft</li>
+                            <li>fold</li>
+                            <li>foldLeft</li>
+                            <li>boxRandom</li>
+                            <li>boxRain</li>
+                            <li>boxRainReverse</li>
+                            <li>boxRainGrow</li>
+                            <li>boxRainGrowReverse</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                    <h2>My Example</h2>
+                    <pre><code class="fragment grow"><!-- CSS -->
+<link href="css/lightbox.css" rel="stylesheet" />
+<link href="css/adipoli.css" rel="stylesheet" />
+
+<!-- JavaScript -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.adipoli.min.js"></script>
+<script src="js/lightbox-2.6.min.js"></script></code></pre>
+                    <a href="example.html" target="_blank">Go to Example</a>
+                    </section>
+                    <section>
+                        <p>Here's the JavaScript:</p>
+                        <pre><code class="fragment grow"><script>
+$("#cats").adipoli({
+    'startEffect': 'overlay', // transparent, normal, overlay, grayscale
+    'hoverEffect': 'sliceDown', // normal, popout, sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpRandom, sliceUpDown, sliceUpDownLeft, fold, foldLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse
+    'imageOpacity': .4, // sets opacity 0-1
+    'fillColor': "rgb(229, 73, 73)", // color names, hex values, and rgba; inside quotes
+    'overlayText': "Cats!",
+    'textColor': "white",
+    'boxCols': 7
+});
+$("#dragonball").adipoli({
+    'startEffect': 'transparent',
+    'hoverEffect': 'popout',
+});
+$("#futurama").adipoli({
+    'startEffect': 'overlay',
+    'hoverEffect': 'sliceDownLeft',
+    'slices': 20
+});
+$("#girl").adipoli({
+    'startEffect': 'grayscale',
+    'hoverEffect': 'boxRainGrow'
+});
+$("#snitch").adipoli({
+    'startEffect': 'overlay',
+    'hoverEffect': 'foldLeft',
+    'fillColor': 'aquamarine'
+});
+$("#stadium").adipoli({
+    'startEffect': 'transparent',
+    'hoverEffect': 'boxRandom'
+});
+$("#mountain").adipoli({
+    'startEffect': 'grayscale',
+    'hoverEffect': 'popout'
+});
+$("#blimp").adipoli({
+    'startEffect': 'grayscale',
+    'hoverEffect': 'boxRain'
+});
+$("#strawhats").adipoli({
+    'startEffect': 'transparent', // transparent, normal, overlay, grayscale
+    'hoverEffect': 'sliceUpRandom'
+});
+</script></code></pre>
+                    </section>
+                </section>
+            </div>
+		</div>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+        <script src="js/jquery.adipoli.min.js"></script>
+        <script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
