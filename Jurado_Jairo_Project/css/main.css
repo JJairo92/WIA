@@ -1,0 +1,146 @@
+/*
+    Name: Jairo Jurado
+    WIA Project: Real Football Reports
+*/
+
+/********************* Defaults *********************/
+
+header, footer {
+    background-color: #0e4e72;
+    height: 80px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Asap', sans-serif;
+    margin-left: 2%;
+    color: rgba(57, 140, 209, 0.48);
+    font-size: 18pt;
+}
+
+h3 {
+    font-size: 13pt;
+}
+
+p {
+    color: #817e7e;
+}
+
+#Canvas1 {
+    margin: 1% 0 0 1%;
+    float: left;
+}
+
+nav {
+    float: right;
+    width: 50%;
+}
+
+nav ul {
+    font-family: 'Galdeano', sans-serif;
+    list-style-type: none;
+    color: #f4f4f4;
+}
+
+nav ul li {
+    float: left;
+    margin: 2% 0 0 5%;
+    font-size: 14pt;
+}
+
+footer {
+    text-align: center;
+    color: #f4f4f4;
+    clear: both;
+}
+
+footer p {
+    padding: 2% 0 0 0;
+    font-size: 11pt;
+    font-family: 'Crimson Text', serif;
+    color: #f4f4f4;
+}
+
+/********************* Map Section *********************/
+#map {
+    float: right;
+    width: 100%;
+    overflow: hidden;
+}
+
+#map-img-section {
+    background-image: url(../images/map.png);
+    background-repeat: no-repeat;
+    background-position: 320px 0px;
+    height: 450px;
+    color: #fff;
+    float: right;
+    margin: 0 1% 0 0;
+    width: 53%;
+    font-size: 10pt;
+} 
+
+.country-detail {
+	position: relative;
+	top: -245px;
+	left: 70px;
+	width: 240px;
+	height: 260px;
+    color: #817e7e;
+}
+
+#map-img-section .country_detail {
+	position: absolute;
+	top: 0px;
+	width: 230px;
+	padding: 10px 0px 0px 12px;
+	border-left: 1px solid #a9b5c8;
+	border-top: 1px solid #a9b5c8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#map-img-section a.pin {
+    background-image: url(../images/pin.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    height: 30px;
+    width: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+#map-img-section a.pin:hover {
+    background-image: url(../images/pin-hover.png);
+}
+
+#map-img-section a.pin.selected {
+    background-image: url(../images/pin-selected.png);
+}
+
+#map h2 {
+    float: left;
+}
+
+#map-p-section {
+    float: left;
+    clear: left;
+    margin-left: 3%;
+    font-family: 'Crimson Text', serif;
+    font-size: 13pt;
+    width: 40%;
+}
+
+#map-p-section p {
+    clear: left;
+    margin: 0 0 5% 2%;
+}
+
+.country-detail-container {
+    display: none;
+}
