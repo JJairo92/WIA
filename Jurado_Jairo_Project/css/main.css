@@ -4,7 +4,6 @@
 */
 
 /********************* Defaults *********************/
-
 header, footer {
     background-color: #0e4e72;
     height: 80px;
@@ -16,7 +15,7 @@ h1 {
 
 h2 {
     font-family: 'Asap', sans-serif;
-    margin-left: 2%;
+    margin-left: 1%;
     color: rgba(57, 140, 209, 0.48);
     font-size: 18pt;
 }
@@ -36,7 +35,12 @@ p {
 
 nav {
     float: right;
-    width: 50%;
+    width: 60%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
 }
 
 nav ul {
@@ -64,83 +68,128 @@ footer p {
     color: #f4f4f4;
 }
 
-/********************* Map Section *********************/
-#map {
-    float: right;
-    width: 100%;
-    overflow: hidden;
+/********************* World Cup Wins Section *********************/
+#about-us {
+    margin-top: 3%;
 }
 
-#map-img-section {
-    background-image: url(../images/map.png);
-    background-repeat: no-repeat;
-    background-position: 320px 0px;
-    height: 450px;
-    color: #fff;
-    float: right;
-    margin: 0 1% 0 0;
-    width: 53%;
-    font-size: 10pt;
-} 
-
-.country-detail {
-	position: relative;
-	top: -245px;
-	left: 70px;
-	width: 240px;
-	height: 260px;
-    color: #817e7e;
-}
-
-#map-img-section .country_detail {
-	position: absolute;
-	top: 0px;
-	width: 230px;
-	padding: 10px 0px 0px 12px;
-	border-left: 1px solid #a9b5c8;
-	border-top: 1px solid #a9b5c8;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-}
-
-#map-img-section a.pin {
-    background-image: url(../images/pin.png);
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    height: 30px;
-    width: 20px;
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-
-#map-img-section a.pin:hover {
-    background-image: url(../images/pin-hover.png);
-}
-
-#map-img-section a.pin.selected {
-    background-image: url(../images/pin-selected.png);
-}
-
-#map h2 {
-    float: left;
-}
-
-#map-p-section {
-    float: left;
-    clear: left;
+#about-us h2 {
     margin-left: 3%;
-    font-family: 'Crimson Text', serif;
-    font-size: 13pt;
-    width: 40%;
 }
 
-#map-p-section p {
+#about-us p {
+    margin-left: 3%;
+    line-height: 1.5em;
+}
+
+/********************* World Cup Wins & Rankings Section *********************/
+#world-wins {
+    text-align: center;
+    margin: 1% 2%;
+}
+
+#world-wins h2 {
+    float: left;
+}
+
+#world-wins p {
+    clear: both;
+    text-align: left;
+    margin-left: 1%;
+    line-height: 1.5em;
+}
+
+#world-buttons {
+    width: 10%;
+    margin-right: 5%;
+}
+
+#world-buttons ul {
+    float:left;
+    margin: 200% 50% 0 60%;
+}
+
+#world-buttons ul li {
+    background-color: #fff;
+    border: 1px rgba(209,148,221,1);
+    color: #817e7e;
+    padding: 1%;
+    margin: 0 0 1% 3%;
+    font-size: 11pt;
+}
+
+.world-teams {
+    float: left;
     clear: left;
-    margin: 0 0 5% 2%;
+    width: 100%;
 }
 
-.country-detail-container {
-    display: none;
+#Canvas2 {
+    float: left;
+    margin: 2% 0;
+}
+
+#Canvas3 {
+    float: left;
+    margin-left: 1%;
+}
+
+#comboChart1, #comboChart2 {
+    overflow: hidden;
+    text-align: center;
+}
+
+#toggle1930, #toggle1974 {
+    float: left;
+    clear: both;
+    font-size: 12pt;
+    font-family: 'Crimson Text', serif;
+    background: none;
+    border: none;
+    width: 30%;
+    text-align: left;
+}
+
+#toggle1930 img, #toggle1974 img {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+hr {
+    margin: 1% 0;
+    clear: both;
+}
+
+/********************* Gallery Section *********************/
+
+#gallery h2 {
+   margin-left: 3%; 
+}
+
+#gallery img {
+    margin: 1% 1%;
+}
+
+#pictures {
+    margin-left: 2%;
+}
+
+#pictures a {
+    text-decoration: none;
+}
+
+
+
+/********************* Video Section *********************/
+#video h2 {
+    margin-left: 3%;
+}
+
+#video p {
+    margin-left: 3%;
+    line-height: 1.5em;
+}
+
+video {
+    margin-left: 3%;
 }

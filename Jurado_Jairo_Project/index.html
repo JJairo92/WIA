@@ -6,13 +6,18 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/lightbox.css" />
+        <link rel="stylesheet" href="css/main.css" />      
+        
         <!-- Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700italic,600italic,400italic,700,600|Galdeano|Asap:400,700italic,400italic,700' rel='stylesheet' type='text/css'>
         
         <!-- JavaScript -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="js/modernizr.js"></script>      
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>        
+        <script type="text/javascript" src="js/Chart.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     
@@ -21,46 +26,102 @@
             <h1><a href="#" title="Return to Home"><canvas id="Canvas1" width="250" height="55">Your browser does not support canvas.</canvas></a></h1>
             <nav>
                 <ul>
-                    <li>CONMEBOL MAP</li>
-                    <li>POLLS</li>
+                    <li><a href="#about-us" title="Link to CONMEBOL World Cup Stats Section">ABOUT US</a></li>
+                    <li><a href="#world-wins" title="Link to CONMEBOL World Cup Stats Section">CONMEBOL WORLD CUP STATS</a></li>
+                    <li><a href="#comboChart1" title="Link to CONMEBOL World Cup Stats Section">RANKINGS</a></li>
+                    <li><a href="#gallery" title="Link to CONMEBOL World Cup Stats Section">GALLERY</a></li>
+                    <li><a href="#video" title="Link to CONMEBOL World Cup Stats Section">VIDEO</a></li>
                 </ul>
             </nav>
         </header>
         
-        <section id="map">
-            <div id="map-p-section">
-            <h2>CONMEBOL MAP</h2>
-            <p>The <strong>South American Football Confederation</strong> or as it is known in Spanish: <em>Confederación Sudamericana de Fútbol</em>, or CONMEBOL for short, is the official South American Continental for FIFA &lpar;<em>Fédération Internationale de Football Association&rpar;</em>. The CONMEBOL is made of 10 team members: Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Paraguay, Perú, Uruguay, and Venezuela.</p>
-            <p>The CONMEBOL 2014 Brazil World Cup Qualifiers have ended as of December 19th, 2013. The teams that qualified were: Argentina, Colombia, Chile, Ecuador, Uruguay, and Brazil. Brazil qualified by default because the 2014 World Cup will be held in Brazil.</p>
-            </div>
-            <div id="map-img-section">
-                <a class="pin" style="top: 295px; left: 480px;" country="argentina" title="Argentina"></a>
-                <a class="pin" style="top: 160px; left: 470px;" country="bolivia" title="Bolivia"></a>
-                <a class="pin" style="top: 100px; left: 540px;" country="brazil" title="Brazil"></a>
-                <a class="pin" style="top: 135px; left: 450px;" country="chile" title="Chile"></a>
-                <a class="pin" style="top: -50px; left: 420px;" country="colombia" title="Colombia"></a>
-                <a class="pin" style="top: -55px; left: 390px;" country="ecuador" title="Ecuador"></a>
-                <a class="pin" style="top: 35px; left: 495px;" country="paraguay" title="Paraguay"></a>
-                <a class="pin" style="top: -60px; left: 410px;" country="peru" title="Perú"></a>
-                <a class="pin" style="top: 35px; left: 520px;" country="uruguay" title="Uruguay"></a>
-                <a class="pin" style="top: -220px; left: 460px;" country="venezuela" title="Venezuela"></a>
-                
-                <div class="detail-container">
-                    <div class="country-detail">
-                        <h3>Choose a Country</h3>
-                        <p>Click one of the pins on the right.</p>
-                    </div> <!-- Closes "country-detail" div -->
-                </div> <!-- Closes "detail-container" div -->
-            </div> <!-- Closes "map-img-section" div -->
-            
-            
+        <section id="about-us">
+            <h2>ABOUT US</h2>
+            <p>Real Football Reports is a team of "real football" (soccer) enthusiasts who are following the world cup very closely. We have organized this information into charts for you to see the changes the teams have made throughout the years. As of December 2013, we only have the CONMEBOL information.</p>
+            <p>We alo like to watch videos of real football players, all of you lovers out there. We will provide an email adress where you can send us your videos and we'll post one on the site once a week. Stay tuned!</p>
         </section>
-        <div class="country-detail-container">
-                <div class="country-detail" id="argentina">
-                    <h3>Argentina</h3>
-                    <p>Argentina has qualified to enter the world cup 16 times. Out of those 16 times qualified, Argentina has been crowned champions 2 times. The team has qualified to the 2014 World Cup and it's first place in the CONMEBOL World Cup Qualifiers Standings.</p>
-                </div>
-            </div> <!-- Closes "country-detail-container" div -->
+        
+        <section id="world-wins">            
+            <h2 id="home-title">CONMEBOL WORLD CUP STATS</h2>
+            <p>The <strong>South American Football Confederation</strong> or as it is known in Spanish: <em>Confederación Sudamericana de Fútbol</em>, or CONMEBOL for short, is the official South American Continental governing body for FIFA &lpar;<em>Fédération Internationale de Football Association&rpar;</em>. The CONMEBOL is made of 10 team members: Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Paraguay, Perú, Uruguay, and Venezuela.</p>
+            <p>The CONMEBOL 2014 Brazil World Cup Qualifiers have ended as of December 19th, 2013. The teams that qualified were: Argentina, Colombia, Chile, Ecuador, Uruguay, and Brazil. Brazil qualified by default because the 2014 World Cup will be held in Brazil.</p>      
+            
+            <div id="world-buttons">
+                <ul>
+                    <li style="list-style-image: url(../images/argentina-color.png);" class="world-teams">Argentina</li>
+                    <li style="list-style-image: url(../images/bolivia-color.png);" class="world-teams">Bolivia</li>
+                    <li style="list-style-image: url(../images/brazil-color.png);" class="world-teams">Brazil</li>
+                    <li style="list-style-image: url(../images/chile-color.png);" class="world-teams">Chile</li>
+                    <li style="list-style-image: url(../images/colombia-color.png);" class="world-teams">Colombia</li>
+                    <li style="list-style-image: url(../images/ecuador-color.png);" class="world-teams">Ecuador</li>
+                    <li style="list-style-image: url(../images/paraguay-color.png);" class="world-teams">Paraguay</li>
+                    <li style="list-style-image: url(../images/peru-color.png);" class="world-teams">Perú</li>
+                    <li style="list-style-image: url(../images/uruguay-color.png);" class="world-teams">Uruguay</li>
+                    <li style="list-style-image: url(../images/venezuela-color.png);" class="world-teams">Venezuela</li>
+                </ul>
+            </div>
+            
+            <!-- World Cup Wins Graph -->
+            <canvas id="Canvas2" width="1000" height="500">Your browser does not support canvas.</canvas>
+            
+            <!-- World Cup Rankings Graphs -->
+            
+            <!-- Rankings 1930-1970 -->
+            <button id="toggle1930">Rankings 1930-1970<img id="arrow1" src="images/arrow.png"/></button> <!-- Toggle button for "comboChart1" -->
+            <br />
+            <hr />
+            <div id="comboChart1" style="width: 1350px; height: 700px;"></div>
+            
+            <!-- Rankings 1974-2010 -->
+            <button id="toggle1974">Rankings 1974-2010<img id="arrow2" src="images/arrow.png"/></button> <!-- Toggle button for "comboChart2" -->
+            <br />
+            <hr />
+            <div id="comboChart2" style="width: 1350px; height: 700px;"></div>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            
+            <div id="pictures">
+            <!-- CONMEBOL Building -->
+                <a href="images/conmebol-building-large.jpg" data-lightbox="group1" title="Official CONMEBOL Building in South America">
+                    <img src="images/conmebol-building-small.jpg" alt="Image 1" width="150" height="150" />
+                </a>
+                
+                <!-- CONMEBOL Flags -->
+                <a href="images/flags-large.jpg" data-lightbox="group1" title="Flags of the CONMEBOL Teams">
+                    <img src="images/flags-small.jpg" alt="Image 2" width="150" height="150" />
+                </a>
+                
+                <!-- Brazil Players -->
+                <a href="images/players-large.jpg" data-lightbox="group1" title="Brazil Team Playing the Most Beatutiful Sport">
+                    <img src="images/players-small.jpg" alt="Image 3" width="150" height="150" />
+                </a>
+                
+                <!-- CONMEBOL Building -->
+                <a href="images/stadium-large.jpg" data-lightbox="group1" title="Fans in the 2002 World Cup">
+                    <img src="images/stadium-small.jpg" alt="Image 2" width="150" height="150" />
+                </a>
+                
+                <!-- CONMEBOL Building -->
+                <a href="images/trophy-large.jpg" data-lightbox="group1" title="The beautiful World Cup">
+                    <img src="images/trophy-small.jpg" alt="Image 2" width="150" height="150" />
+                </a>
+            </div>
+        </section>
+        
+        <section id="video">
+            <h2>Video</h2>
+            <video width="600" controls>
+                <source src="videos/video.mp4" type="video/mp4" />
+                <source src="videos/video.ogv" type="video/ogg" />
+                <source src="videos/video.webm" type="video/webm" />
+                
+                <p>Video not supported. Please update your browser.</p>
+            </video>
+            <p>We'll be posting here the video of the week. Since we don't have an email address set up for you to send us your video, we have a video of one of our developers juggling in his home.</p>
+        </section>     
+        
         <footer>
             <p>Copyright &copy; 2013 <strong>Real Football Reports</strong>. Logo drawing is "Soccer" by David Padrosa from <em>The Noun Project</em>.</p>
         </footer>
